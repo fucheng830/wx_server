@@ -9,18 +9,16 @@ if os.path.exists(dotenv_path):
     load_dotenv(dotenv_path, override=True)
 
 import requests
-from fastapi import FastAPI, Request
 from wechat import WeChat
-from config import APP_ID, APP_SECRET
-from database import redis_conn, SessionLocal, get_db
-from sqlalchemy.orm import Session
+from database import get_db
 from model import *
 
 from typing import Optional
 from utils import *
-from fastapi import Depends
 import logging
+from fastapi import FastAPI, Request, Depends
 from fastapi.responses import JSONResponse
+from sqlalchemy.orm import Session  
 
 app = FastAPI()
 

@@ -1,1 +1,1 @@
-nohup /home/ubuntu/miniconda2/envs/quchat/bin/python /home/ubuntu/miniconda2/envs/quchat/bin/uvicorn server:app --host 0.0.0.0 --port 6341 &
+nohup python uvicorn server:app --host 0.0.0.0 --port 6342 &

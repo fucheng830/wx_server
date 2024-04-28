@@ -2,7 +2,6 @@
 import hashlib  # 提供哈希算法的库
 import time  # 时间相关操作
 from bs4 import BeautifulSoup  # 解析和操作XML的库
-from flask import request  # 用于处理请求参数
 
 def sha1(str):
     return hashlib.sha1(str.encode("utf-8")).hexdigest()
